@@ -39,7 +39,10 @@ if counter > 4:
                 print("Последняя строка:", last_line)
         list_last_line = last_line.split()
         # print(list_last_line)
-        last_word_in_list = list_last_line[-1]
-        print("Последнее слово в строке: {}\nДлина слова = {}".format( last_word_in_list, len(last_word_in_list)))
+        if list_last_line:
+            last_word_in_list = list_last_line[-1]
+            print("Последнее слово в строке: {}\nДлина слова = {}".format( last_word_in_list, len(last_word_in_list)))
+        else:
+            print("В последней строке нет слов")
 else:
     print("\033[1m\033[31m{}\033[0m".format("Недостаточно элементов!"))
