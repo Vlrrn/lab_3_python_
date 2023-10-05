@@ -9,7 +9,7 @@ with open("F1.txt", 'w+') as f1:
     counter = 0
     while True:
         i = 1
-        dd = input("Введите данные для %.f скроки: " % (counter + 1))
+        dd = input("Введите данные для %.f строки: " % (counter + 1))
         f1.write(dd + "\n")
         counter += 1
         i += 1
@@ -20,15 +20,17 @@ print("\033[3m\033[36m{}\033[0m".format(" " * 8, "\nВвод завершён!\n
 if counter > 4:
     with open("F1.txt", 'r') as f1, open("F2.txt", 'w') as f2:
         l = 4
+        count = -1
         for i, line in enumerate(f1, 1):
             if i == l:
                 f2.write(line)
                 l += 1
-    with open("F2.txt", 'r') as f2:
-        count = 0
-        for line in f2:
-            while f2.readline() != '':
                 count += 1
+    with open("F2.txt", 'r') as f2:
+        # count = 0
+        # for line in f2:
+        #     while f2.readline() != '':
+        #         count += 1
         # print(count)
         f2.seek(0)
         for i, line in enumerate(f2, 1):
@@ -41,12 +43,3 @@ if counter > 4:
         print("Последнее слово в строке: {}\nДлина слова = {}".format( last_word_in_list, len(last_word_in_list)))
 else:
     print("\033[1m\033[31m{}\033[0m".format("Недостаточно элементов!"))
-
-    # for el in data_last:
-
-    # count = 0
-    # s = f2.readline()
-    # while s != '':
-    #     s = f2.readline()
-    #     count += 1
-    #     print(s, " - ", count)
