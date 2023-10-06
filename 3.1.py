@@ -14,7 +14,6 @@ with open("F1.txt", 'w+') as f1:
         counter += 1
         i += 1
         if dd == '':
-            # print(counter)
             break
 print("\033[3m\033[36m{}\033[0m".format(" " * 8, "\nВвод завершён!\n"))
 if counter > 4:
@@ -27,18 +26,12 @@ if counter > 4:
                 l += 1
                 count += 1
     with open("F2.txt", 'r') as f2:
-        # count = 0
-        # for line in f2:
-        #     while f2.readline() != '':
-        #         count += 1
-        # print(count)
         f2.seek(0)
         for i, line in enumerate(f2, 1):
             if i == count:
                 last_line = line
                 print("Последняя строка:", last_line)
         list_last_line = last_line.split()
-        # print(list_last_line)
         if list_last_line:
             last_word_in_list = list_last_line[-1]
             print("Последнее слово в строке: {}\nДлина слова = {}".format( last_word_in_list, len(last_word_in_list)))

@@ -10,8 +10,11 @@
 #      Физика: 30(л) 10(лаб)
 #      Физкультура: 30(пр)
 # Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
-
+print("\033[3m\033[36m{}{}{}\033[0m".format("\n", " " * 8, "Задание 3\n"))
 with open("File_3_3.txt", encoding="utf-8") as file_3_3:
+    print(file_3_3.read())
+    file_3_3.seek(0)
+    print()
     s = {}
     for line in file_3_3.readlines():
         p, c = line.split(':')
@@ -24,4 +27,4 @@ with open("File_3_3.txt", encoding="utf-8") as file_3_3:
             s2 += int(el)
         s[key] = s2
         print(key, ' - ', s2)
-    print(s)
+    print("\n", s)
