@@ -7,6 +7,7 @@
     # Машинка 50
     # Кукла 40
 import os
+
 print("\033[3m\033[36m{}{}{}\033[0m".format("\n", " " * 8, "Задание 2\n"))
 while True:
     if os.path.exists("File_3_2.txt"):

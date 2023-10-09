@@ -11,6 +11,7 @@
 #   Пример json-объекта: [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 import json
 import os
+
 print("\033[3m\033[36m{}{}{}\033[0m".format("\n", " " * 8, "Задание 4\n"))
 while True:
     if os.path.exists("File_3_4.txt"):
